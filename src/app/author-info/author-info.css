@@ -6,9 +6,7 @@
     width: 70%;
     margin: auto;
     height: 200px;
-    position: absolute;
-    bottom: 0;
-    left: 15%;
+    position: relative;    
 }
 
 li {

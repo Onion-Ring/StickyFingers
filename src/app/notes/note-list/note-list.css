@@ -1,18 +1,91 @@
 .note-list-section {
     padding: 10px;
     margin-bottom: 10px;
-    background-color: rgb(255, 255, 255);    
-    border-radius: 10px;    
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
     text-align: center;
+    position: relative;
 }
 
-.note-list-section__title{
+.note-list-section__title {
     color: rgb(70, 74, 105);
 }
 
-.note-list-section__separator{
+.note-list-section__separator {
     width: 70%;
     margin: auto;
     margin-top: 14px;
     height: 2px;
+}
+
+.note-list-section__priority-filter,
+.note-list-section__title-filter {
+    position: absolute;
+}
+
+.note-list-section__priority-filter {
+    left: 5px;
+    top: 5px;
+}
+
+.note-list-section__priority-filter__title {
+    color: rgb(70, 74, 105);
+}
+
+.note-list-section__priority-filter__select {
+    margin-top: 6px;
+    padding: 8px;
+    outline: none;
+    border-radius: 4px;
+    border: 1.5px solid #CECC7C;
+    font-size: 15px;
+    color: rgb(70, 74, 105);
+    font-weight: bold;
+}
+
+.note-list-section__priority-filter__select option{
+    border: none;
+    background-color: #ffffff;
+        font-weight: bold;
+}
+
+.note-list-section__title-filter {
+    margin-top: 10px;
+    z-index: 5;
+    width: 50%;
+    left: 25%;
+}
+
+.note-list-section__title-filter__input {
+    border: none;
+    padding: 8px;
+    font-size: 20px;
+    width: 450px;
+    outline: none;
+    margin-top: 10px;
+    border-bottom: 2px solid black;
+    color: rgb(70, 74, 105);
+}
+
+.note-list-section__title-filter__input::placeholder {
+    color: rgb(70, 74, 105);
+}
+
+.note-list-section__title-filter__img {
+    position: absolute;
+    right: 17%;
+    top: 10px;
+    width: 30px;
+}
+
+.note-list-section__notes {
+    margin-top: 70px;
+    position: relative;
+}
+
+.note-list-section__notes__list-empty {
+    font-size: 25px;
+    color: rgb(70, 74, 105);
+    font-weight: bold;
+    padding: 10px;
 }

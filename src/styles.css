@@ -6,8 +6,9 @@
 
 body {
     background-color: rgb(48, 48, 48);
-    font-family: 'poppins', sans-serif;
+    font-family: 'poppins', sans-serif;    
 }
+
 
 @font-face {
     font-family: 'poppins';

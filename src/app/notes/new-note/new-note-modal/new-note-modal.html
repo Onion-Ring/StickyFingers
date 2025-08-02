@@ -5,13 +5,13 @@
 
     <h1 class="new-note__title">Create a new note</h1>
 
-    <input placeholder="Title" name="title" type="text" id="title" class="new-note__input" (input)="onContentEnter()" [(ngModel)]="note().title" />    
+    <input placeholder="Title (required)" name="title" type="text" id="title" class="new-note__input" (input)="onContentEnter()" [(ngModel)]="note().title" />    
     
     @if(titleEmpty() && (!note().title || note().title.length === 0)){
         <p class="new-note__error-message">Title is required, please introduce a title and try again</p>
     }
         
-    <textarea class="new-note__textarea" name="description" id="description" placeholder="Description"
+    <textarea class="new-note__textarea" name="description" id="description" placeholder="Description (optional, if not provided, the description will be the title)"
         [(ngModel)]="note().description"></textarea>
 
     <label class="new-note__label" for="priority">Priority (optional)</label>

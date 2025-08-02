@@ -1,0 +1,109 @@
+.note {
+    width: 25%;
+    padding: 12px;
+    margin: 12px;
+    background-color: rgb(182, 200, 219);
+    display: inline-block;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Priority, delete note button, category and note title 
+are elements that need to be positioned*/
+.note__priority,
+.note__delete-btn,
+.note__title,
+.note__category {
+    position: absolute;
+}
+
+.note__priority {
+    top: 0;
+    left: 5px;
+    z-index: 5;
+}
+
+/* Priority styles */
+.high,
+.low,
+.medium {
+    font-weight: bold;
+}
+
+.high {
+    color: #ff6666;
+    animation: change-color 1.3s infinite alternate;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+    animation-play-state: running;
+
+}
+
+.low {
+    color: #34614b
+}
+
+.medium {
+    color: rgb(121, 34, 148);
+}
+
+.note__delete-btn {
+    border: none;
+    padding: 4px;
+    background: transparent;
+    font-size: 20px;
+    z-index: 5;
+    right: 8px;
+    top: -4px;
+    border-radius: 3px;
+}
+
+.note__title {
+    color: rgb(91, 91, 155);
+    font-weight: bold;
+    font-size: 20px;
+    z-index: 0;
+    top: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #e6b904;
+}
+
+.note__description {
+    padding: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+
+    text-align: left;
+}
+
+
+.note__category {
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    border-bottom-left-radius: 5px;
+    background-color: rgb(96, 108, 173);
+    border-bottom-right-radius: 5px;
+}
+
+/* Animations */
+
+@keyframes change-color {
+
+
+    50% {
+        color: #ff6666;
+    }
+
+    100% {
+        color: #990000;
+    }
+
+
+
+}

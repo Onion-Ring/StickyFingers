@@ -1,8 +1,7 @@
-import { Component, computed, ElementRef, output, signal, viewChild } from '@angular/core';
+import { Component, ElementRef, output, signal, viewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NotesService } from '../../notes.service';
-import { Notes } from '../../notes';
-import { Note } from '../../note.model';
+import { NoteModel } from '../../note.model';
 
 @Component({
   selector: 'app-new-note-modal',
@@ -14,7 +13,7 @@ import { Note } from '../../note.model';
 export class NewNoteModal {
 
   // Two way binded signal (Priority is optional so the default value is high)
-  note = signal<Note>({ title: "", id: 0, description: "", priority: "High", category: "" });
+  note = signal<NoteModel>({ title: "", id: 0, description: "", priority: "High", category: "" });
   // DI
   constructor(private notesService: NotesService) { }
   // Used to reset the form once a note was submitted
@@ -30,17 +29,33 @@ export class NewNoteModal {
       this.titleEmpty.set(true);
 
     } else {
-      if (!this.note().description){
-        this.note().description = this.note().title;
-      }
-      if (this.note().category) {
-        this.note().category = "other";
-      }
+
+      this.checkOptionalFields();
+
       this.notesService.addNote(this.note());
+
+      // After adding the note we need to ensure both form and note object are reset      
+      this.note.set({ title: "", id: 0, description: "", priority: "High", category: "" });
       this.form().nativeElement.reset();
+
     }
 
+  }
 
+  // In case one of these fields were not selected, a default value is applied
+  private checkOptionalFields() {
+
+    if (!this.note().description) {
+      this.note().description = this.note().title;
+    }
+
+    if (!this.note().category) {
+      this.note().category = "other";
+    }
+
+    if(!this.note().priority){
+      this.note().priority = 'High';
+    }
 
   }
 

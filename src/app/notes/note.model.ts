@@ -1,6 +1,6 @@
 import { type Priority } from "./priority"
 
-export interface Note {
+export interface NoteModel {
     id:number,
     title:string,
     description:string,

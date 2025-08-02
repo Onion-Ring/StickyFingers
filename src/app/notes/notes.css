@@ -1,5 +1,6 @@
 main {
     width: 70%;
     margin: auto;    
-    position: relative;
+    position: relative;    
+    min-height: 67.6vh;
 }

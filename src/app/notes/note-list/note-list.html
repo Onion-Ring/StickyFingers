@@ -1,4 +1,34 @@
 <section class="note-list-section">
+
     <h2 class="note-list-section__title">Your notes</h2>
-    <hr class="note-list-section__separator"/>
+    <hr class="note-list-section__separator" />
+
+    <div class="note-list-section__priority-filter">
+        <h3 class="note-list-section__priority-filter__title">Filter by priority</h3>
+        <select class="note-list-section__priority-filter__select" (change)="onPrioritySelect()" #filterSelect>
+            <option selected>Select a value</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+        </select>
+    </div>
+
+    <div class="note-list-section__title-filter">
+        <img class="note-list-section__title-filter__img" alt="search icon" src="/assets/icons/search.svg">
+        <input class="note-list-section__title-filter__input" name="titleFilter" id="titleFilter" type="text"
+            [(ngModel)]="title" placeholder="Filter by title" />
+    </div>
+
+    <div class="note-list-section__notes">
+            @for (noteItem of notes(); track noteItem.id) {
+            <app-note [note]="noteItem" />
+            }@empty {
+                 @if(retrievedResults){
+                    <p class="note-list-section__notes__list-empty">You have not created any note so far</p>
+                 }  @else {
+                    <p class="note-list-section__notes__list-empty">The search did not retrieve any results</p>
+                 }                    
+            }
+    </div>
+
 </section>
