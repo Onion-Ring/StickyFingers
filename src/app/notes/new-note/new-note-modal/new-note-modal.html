@@ -1,0 +1,27 @@
+<div class="backdrop" (click)="onCloseModal()"></div>
+<form class="new-note" (ngSubmit)="onSubmit()" #form>
+
+    <button class="new-note__close-button" (click)="onCloseModal()">✖</button>
+
+    <h1 class="new-note__title">Create a new note</h1>
+
+    <input placeholder="Title" name="title" type="text" id="title" class="new-note__input" (input)="onContentEnter()" [(ngModel)]="note().title" />    
+    
+    @if(titleEmpty() && (!note().title || note().title.length === 0)){
+        <p class="new-note__error-message">Title is required, please introduce a title and try again</p>
+    }
+        
+    <textarea class="new-note__textarea" name="description" id="description" placeholder="Description"
+        [(ngModel)]="note().description"></textarea>
+
+    <label class="new-note__label" for="priority">Priority (optional)</label>
+    <select name="priority" id="priority" class="new-note__select" [(ngModel)]="note().priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option selected value="High">High</option>
+    </select>
+
+    <input placeholder="Category (optional) (Is related to work, home, is a reminder... )" name="category"
+        type="text" id="category" class="new-note__input" [(ngModel)]="note().category" />
+    <button type="submit" class="new-note__submit-btn">Submit</button>
+</form>

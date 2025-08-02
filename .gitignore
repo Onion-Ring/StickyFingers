@@ -1,52 +1,41 @@
-# Prerequisites
-*.d
+#Angular CLI
+/dist
+/out-tsc
+/.angular
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+# Build
+/build
+/tmp
+/temp
 
-# Linker output
-*.ilk
-*.map
-*.exp
+# Node.js
+/node_modules
+/npm-debug.log
+/yarn-error.log
+/package-lock.json
+/yarn.lock
+/pnpm-lock.yaml
 
-# Precompiled Headers
-*.gch
-*.pch
+# IDEs
+/.vscode
+/.idea
+*.sublime-project
+*.sublime-workspace
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+# OS
+.DS_Store
+Thumbs.db
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# Env
+.env
+.env.*
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# Tmp
+*.log
+*.tmp
+*.swp
+*.bak
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+# Tests
+/coverage
+/test-output

@@ -1,0 +1,18 @@
+.note-list-section {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(255, 255, 255);    
+    border-radius: 10px;    
+    text-align: center;
+}
+
+.note-list-section__title{
+    color: rgb(70, 74, 105);
+}
+
+.note-list-section__separator{
+    width: 70%;
+    margin: auto;
+    margin-top: 14px;
+    height: 2px;
+}

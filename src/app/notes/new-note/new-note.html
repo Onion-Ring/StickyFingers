@@ -1,0 +1,19 @@
+@if (newNoteSectionOpened()) {    
+    <section class="new-note-section">
+        
+        <button class="new-note-section__close-button" (click)="onCloseSection()">✖</button>
+        
+        <h2 class="new-note-section__title">Add a new note here</h2>
+        <button class="new-note-section__add-button" (click)="onOpenNewNoteModal()">✚</button>        
+    </section>
+
+    @if (newNoteModalOpened()){
+        <app-new-note-modal (close)="onCloseNewNoteModal()"/>
+    }
+
+
+}@else {
+    <div class="new-note-section__close-open-tab">
+        <button (click)="onOpenSection()" class="open-button">▼</button>
+    </div>
+}

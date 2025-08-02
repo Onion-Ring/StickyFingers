@@ -1,0 +1,54 @@
+:host {
+    background: #cecc7c;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px;
+    width: 70%;
+    margin: auto;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+}
+
+li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 4px;
+    margin: auto;
+}
+
+p {
+    text-align: center;
+    color: rgb(56, 59, 82);
+}
+
+img {
+    width: 40px;
+}
+
+img:hover{
+    transform: scale(1.2);    
+}
+
+.author-info__social-section,
+.author-info__tech-section {
+    position: absolute;    
+    padding: 5px;
+}
+
+.author-info__social-section {
+    left: 0;
+    bottom: 0;
+}
+
+.author-info__tech-section {
+    right: 0;
+    bottom: 0;
+}
+
+.author-info__tech-section__tech-used,
+.author-info__social-section__social-media {
+    text-align: center;
+    margin-top: 5px;
+}
