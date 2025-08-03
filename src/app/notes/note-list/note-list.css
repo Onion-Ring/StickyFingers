@@ -1,7 +1,7 @@
 .note-list-section {
     padding: 10px;
     margin-bottom: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(240, 240, 240);
     border-radius: 10px;
     text-align: center;
     position: relative;
@@ -15,7 +15,8 @@
     width: 70%;
     margin: auto;
     margin-top: 14px;
-    height: 2px;
+    height: 3.4px;
+    background-color: #484e81;
 }
 
 .note-list-section__priority-filter,
@@ -41,11 +42,13 @@
     font-size: 15px;
     color: rgb(70, 74, 105);
     font-weight: bold;
+    background: rgb(240, 240, 240);
+    
 }
 
 .note-list-section__priority-filter__select option{
     border: none;
-    background-color: #ffffff;
+    background-color: rgb(240, 240, 240);;
         font-weight: bold;
 }
 
@@ -62,8 +65,9 @@
     font-size: 20px;
     width: 450px;
     outline: none;
+    background: rgb(240, 240, 240);;
     margin-top: 10px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid #484e81;
     color: rgb(70, 74, 105);
 }
 

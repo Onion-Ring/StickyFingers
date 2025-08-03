@@ -1,5 +1,5 @@
 import { Component, input, output, signal } from '@angular/core';
-import { NoteModel } from '../note.model';
+import { NoteModel } from '../../note.model';
 
 
 @Component({

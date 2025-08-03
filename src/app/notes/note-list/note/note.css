@@ -2,11 +2,10 @@
     width: 25%;
     padding: 12px;
     margin: 12px;
-    background-color: rgb(182, 200, 219);
+    background-color: rgb(90, 89, 78);
     display: inline-block;
     border-radius: 5px;
-    position: relative;    
-    
+    position: relative;        
 }
 
 /* Priority, delete note button, category and note title 
@@ -37,15 +36,14 @@ are elements that need to be positioned*/
     animation-delay: 0s;
     animation-fill-mode: both;
     animation-play-state: running;
-
 }
 
 .low {
-    color: #34614b
+    color: rgb(173, 226, 173);
 }
 
 .medium {
-    color: rgb(121, 34, 148);
+    color: rgb(196, 173, 226);
 }
 
 .note__delete-btn {
@@ -54,6 +52,7 @@ are elements that need to be positioned*/
     background: transparent;
     font-size: 20px;
     z-index: 5;
+    color: rgb(145, 145, 136);;
     right: 8px;
     top: -4px;
     border-radius: 3px;
@@ -64,35 +63,38 @@ are elements that need to be positioned*/
 }
 
 .note__title {
-    color: rgb(91, 91, 155);
+    color: rgb(209, 161, 27);
     font-weight: bold;
     font-size: 20px;
     z-index: 0;
     top: 0;
+    padding: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     left: 0;
     text-align: center;
     width: 100%;
-    background-color: #e6b904;
+    background-color: #2c2c2c;
 }
 
 .note__description {
     padding: 14px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     color: white;
-
     text-align: left;
 }
 
 
 .note__category {
     bottom: 0;
+    color: #e4d2c1;
     width: 100%;
+    font-weight: bold;
     left: 0;
+    padding: 5px;
     border-bottom-left-radius: 5px;
-    background-color: rgb(96, 108, 173);
+    background-color: rgb(102, 102, 95);
     border-bottom-right-radius: 5px;
 }
 

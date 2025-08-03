@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, computed, ElementRef, inject, OnInit, signal, Signal, viewChild } from '@angular/core';
-import { Note } from "../note/note";
+import { Component, computed, ElementRef, inject, signal, viewChild } from '@angular/core';
+import { Note } from './note/note'; 
 import { NotesService } from '../notes.service';
 import { FormsModule } from '@angular/forms';
 import { NoteModel } from '../note.model';
 import { Backdrop } from '../../shared/backdrop/backdrop';
-import { DeleteWindow } from '../delete-window/delete-window';
+import { DeleteWindow } from './note/delete-window/delete-window';
 
 
 @Component({

@@ -1,15 +1,14 @@
 .new-note-section {
     padding: 10px;
     margin-bottom: 10px;
-    background-color: rgb(71, 71, 55);
-    border-radius: 10px;
-    border: 2px solid rgb(192, 194, 85);
+    background-color: rgb(240, 240, 240);
+    border-radius: 10px;    
     position: relative;
     text-align: center;
 }
 
 .new-note-section__title {
-    color: rgb(192, 194, 85);
+    color: rgb(70, 74, 105);
 }
 
 .new-note-section__add-button {
@@ -19,16 +18,13 @@
     width: 50px;
     height: 50px;
     margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #CECC7C;
+    margin-bottom: 20px;    
     color: rgb(70, 74, 105);
     border-radius: 10px;
+    background-color: transparent;
 }
 
-.new-note-section__add-button:hover {
-    background-color: rgb(70, 74, 105);
-    border: 2px solid #CECC7C;    
-    color: white;   
+.new-note-section__add-button:hover {            
     animation: resize-btn 0.9s infinite alternate; 
 }
 
@@ -48,9 +44,8 @@
 }
 
 .new-note-section__close-open-tab {
-    background-color: rgb(71, 71, 55);
-    border-radius: 10px;
-    border: 2px solid rgb(192, 194, 85);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;    
     margin-bottom: 10px;
     text-align: center;
     width: 5%;
@@ -59,7 +54,7 @@
 }
 
 .open-button {    
-    color: #CECC7C;   
+    color: rgb(70, 74, 105);   
     margin-top: 3px;    
 }
 
@@ -67,7 +62,7 @@
     text-align: right;
     position: absolute;
     top: 0;
-    color: #CECC7C;
+    color: rgb(70, 74, 105);
     position: absolute;
     right: 15px;
 }

@@ -1,5 +1,5 @@
 import { Component, input, output } from '@angular/core';
-import { NotesService } from '../notes.service';
+import { NotesService } from '../../../notes.service';
 
 @Component({
   selector: 'div [deleteWindow]',
