@@ -1,3 +1,8 @@
+@if(delete()){
+    <app-backdrop (click)="onCloseModal()"  ></app-backdrop>
+    <div deleteWindow (close)="onCloseModal()" [noteId]="noteIdToDelete" ></div>
+}
+
 <section class="note-list-section">
 
     <h2 class="note-list-section__title">Your notes</h2>
@@ -20,15 +25,15 @@
     </div>
 
     <div class="note-list-section__notes">
-            @for (noteItem of notes(); track noteItem.id) {
-            <app-note [note]="noteItem" />
-            }@empty {
-                 @if(retrievedResults){
-                    <p class="note-list-section__notes__list-empty">You have not created any note so far</p>
-                 }  @else {
-                    <p class="note-list-section__notes__list-empty">The search did not retrieve any results</p>
-                 }                    
-            }
+        @for (noteItem of notes(); track noteItem.id) {
+        <app-note [note]="noteItem" (openDeleteModal)="onOpenDeleteModal($event)" />
+        }@empty {
+        @if(retrievedResults){
+        <p class="note-list-section__notes__list-empty">You have not created any note so far</p>
+        } @else {
+        <p class="note-list-section__notes__list-empty">The search did not retrieve any results</p>
+        }
+        }
     </div>
 
 </section>

@@ -1,26 +1,30 @@
-import { ChangeDetectionStrategy, Component, computed, ElementRef, inject, signal, Signal, viewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, ElementRef, inject, OnInit, signal, Signal, viewChild } from '@angular/core';
 import { Note } from "../note/note";
 import { NotesService } from '../notes.service';
 import { FormsModule } from '@angular/forms';
 import { NoteModel } from '../note.model';
+import { Backdrop } from '../../shared/backdrop/backdrop';
+import { DeleteWindow } from '../delete-window/delete-window';
+
 
 @Component({
   selector: 'app-note-list',
-  imports: [Note, FormsModule],
+  imports: [Note, FormsModule, Backdrop, DeleteWindow],
   standalone: true,
   templateUrl: './note-list.html',
   styleUrl: './note-list.css'
 })
 export class NoteList {
 
+  noteIdToDelete : number = 0;
   private notesService = inject(NotesService);
   retrievedResults: boolean = true;
+  delete = signal<boolean>(false);
   priority = signal<string>("");
   title = signal<string>("");
   filterSelect = viewChild.required<ElementRef<HTMLSelectElement>>("filterSelect");
 
   notes = computed(() => {
-
     let filteredList: NoteModel[] = [];
     filteredList = this.notesService.filterNotes(this.title(), this.priority());
 
@@ -33,7 +37,6 @@ export class NoteList {
     return filteredList;
   });
 
-
   onPrioritySelect() {
 
     if (this.filterSelect().nativeElement.value !== "Select a value") {
@@ -43,5 +46,15 @@ export class NoteList {
     }
 
   }
+
+  onCloseModal() {
+    this.delete.set(false);
+  }
+
+  onOpenDeleteModal(noteId: number) {
+    this.noteIdToDelete = noteId;
+    this.delete.set(true);
+  }
+
 
 }

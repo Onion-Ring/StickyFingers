@@ -2,10 +2,11 @@ import { Component, ElementRef, output, signal, viewChild } from '@angular/core'
 import { FormsModule } from '@angular/forms';
 import { NotesService } from '../../notes.service';
 import { NoteModel } from '../../note.model';
+import { Backdrop } from "../../../shared/backdrop/backdrop";
 
 @Component({
   selector: 'app-new-note-modal',
-  imports: [FormsModule],
+  imports: [FormsModule, Backdrop],
   standalone: true,
   templateUrl: './new-note-modal.html',
   styleUrl: './new-note-modal.css',

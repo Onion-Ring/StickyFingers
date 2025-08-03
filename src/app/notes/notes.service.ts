@@ -1,4 +1,4 @@
-import { computed, Injectable, Signal, signal } from '@angular/core';
+import { computed, Injectable, OnInit, Signal, signal } from '@angular/core';
 import { NoteModel } from './note.model';
 
 
@@ -11,13 +11,32 @@ export class NotesService {
   private notes = signal<NoteModel[]>([]);
   getNotes = computed(() => this.notes.asReadonly()());
 
+  constructor() {
+    this.loadFromLocalStorage();
+  }
+
+  private loadFromLocalStorage() {
+    const notesJson = localStorage.getItem('notes');
+
+    if (notesJson) {
+      const notes = JSON.parse(notesJson);
+
+      if (notes) {
+        this.notes.set(notes);
+      }
+    }
+  }
+
   addNote(note: NoteModel): void {
     note.id = this.generateId(note.id);
     this.notes.update((oldNotes) => [...oldNotes, note]);
+    localStorage.setItem("notes", JSON.stringify(this.notes()));
   }
 
   deleteNote(noteId: number): void {
-
+    const newNotes = this.notes().filter((note) => note.id !== noteId);
+    this.notes.set(newNotes);
+    localStorage.setItem("notes", JSON.stringify(this.notes()));
   }
 
   // Depending on the signals updated, the list will be filtered

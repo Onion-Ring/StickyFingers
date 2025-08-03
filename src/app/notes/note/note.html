@@ -1,6 +1,6 @@
 <div class="note">
     <p class="note__priority {{note().priority.toLowerCase()}}">{{note().priority}}</p>
-    <button class="note__delete-btn">✖</button>
+    <button class="note__delete-btn" (click)="onDeleteNote()">✖</button>
     <h3 class="note__title">{{note().title}}</h3>
     <p class="note__description">{{note().description}}</p>
     <p class="note__category">{{note().category}}</p>

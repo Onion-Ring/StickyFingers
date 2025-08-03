@@ -5,7 +5,8 @@
     background-color: rgb(182, 200, 219);
     display: inline-block;
     border-radius: 5px;
-    position: relative;
+    position: relative;    
+    
 }
 
 /* Priority, delete note button, category and note title 
@@ -56,6 +57,10 @@ are elements that need to be positioned*/
     right: 8px;
     top: -4px;
     border-radius: 3px;
+}
+
+.note__delete-btn:hover {
+    transform: scale(1.2);
 }
 
 .note__title {

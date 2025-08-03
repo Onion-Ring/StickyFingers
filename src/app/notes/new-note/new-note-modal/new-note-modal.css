@@ -1,21 +1,10 @@
-.backdrop {
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.267);
-    backdrop-filter: blur(4px);
-}
-
 .new-note {
     z-index: 15;
     position: fixed;
     width: 70%;
     top: 200px;
     border-radius: 10px;
-    background-color: #cecd7c91;
+    background-color: #ffffff9a;
     text-align: center;
     margin: auto;
     border: 2px solid rgb(70, 74, 105);
@@ -123,7 +112,7 @@
     font-size: 18px;
     margin: 10px;
     padding: 5px;
-    animation: change-color 2.4s infinite;
+    animation: change-color 2.4s infinite alternate;
 }
 
 @keyframes change-color {
