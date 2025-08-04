@@ -5,7 +5,7 @@
     background-color: rgb(90, 89, 78);
     display: inline-block;
     border-radius: 5px;
-    position: relative;        
+    position: relative;
 }
 
 /* Priority, delete note button, category and note title 
@@ -52,7 +52,8 @@ are elements that need to be positioned*/
     background: transparent;
     font-size: 20px;
     z-index: 5;
-    color: rgb(145, 145, 136);;
+    color: rgb(145, 145, 136);
+    ;
     right: 8px;
     top: -4px;
     border-radius: 3px;
@@ -111,6 +112,16 @@ are elements that need to be positioned*/
         color: #990000;
     }
 
+}
 
+@media (max-width: 1400px) {
+    .note {
+        width: 45%;
+    }
+}
 
+@media (max-width: 1030px) {
+    .note {
+        width: 55%;
+    }
 }

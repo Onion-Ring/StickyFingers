@@ -74,7 +74,4 @@ export class NotesService {
     return noteId;
   }
 
-
-
-
 }

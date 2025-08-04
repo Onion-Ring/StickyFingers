@@ -12,7 +12,7 @@
 }
 
 .note-list-section__separator {
-    width: 70%;
+    width: 50%;
     margin: auto;
     margin-top: 14px;
     height: 3.4px;
@@ -43,13 +43,13 @@
     color: rgb(70, 74, 105);
     font-weight: bold;
     background: rgb(240, 240, 240);
-    
 }
 
-.note-list-section__priority-filter__select option{
+.note-list-section__priority-filter__select option {
     border: none;
-    background-color: rgb(240, 240, 240);;
-        font-weight: bold;
+    background-color: rgb(240, 240, 240);
+    ;
+    font-weight: bold;
 }
 
 .note-list-section__title-filter {
@@ -63,9 +63,9 @@
     border: none;
     padding: 8px;
     font-size: 20px;
-    width: 450px;
+    width: 67%;
     outline: none;
-    background: rgb(240, 240, 240);;
+    background: rgb(240, 240, 240);
     margin-top: 10px;
     border-bottom: 2px solid #484e81;
     color: rgb(70, 74, 105);
@@ -92,4 +92,24 @@
     color: rgb(70, 74, 105);
     font-weight: bold;
     padding: 10px;
+}
+
+@media (max-width: 860px) {
+
+    .note-list-section__separator {
+        width: 37%;
+    }
+
+    .note-list-section__title-filter__input {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .note-list-section__title-filter__img {
+        position: absolute;
+        right: 8%;
+        top: 25px;
+        width: 30px;
+    }
+
 }

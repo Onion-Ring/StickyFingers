@@ -26,3 +26,21 @@
     left: 0;
 
 }
+
+@media (max-width: 680px) {
+
+    .main-header{
+        width: 95%;
+    }
+
+    .main-header__title {
+        font-size: 28px;
+        margin-left: 100px;
+    }
+
+    .main-header__logo { 
+        width: 100px;
+    }
+
+
+}

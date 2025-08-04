@@ -1,7 +1,8 @@
 .new-note {
     z-index: 15;
     position: fixed;
-    width: 70%;
+    width: 35%;
+    left: 32.5%;
     top: 200px;
     border-radius: 10px;
     background-color: #ffffff9a;
@@ -16,7 +17,7 @@
     font-size: 20px;
     background-color: rgba(70, 74, 105, 0);
     padding: 5px;
-    width: 600px;
+    width: 70%;
     margin: 10px;
     border: none;
     border-bottom: 2.3px solid rgb(78, 87, 112);
@@ -35,7 +36,7 @@
     padding: 10px;
     border-radius: 10px;
     margin-top: 10px;
-    width: 600px;
+    width: 30%;
     margin-bottom: 10px;
     font-size: 20px;
     color: #cecd7c;
@@ -50,7 +51,7 @@
     padding: 8px;
     border: 1.2px solid rgb(70, 74, 105);
     border-radius: 3px;
-    width: 600px;
+    width: 70%;
     font-size: 20px;
     background-color: transparent;
     margin-top: 10px;
@@ -86,7 +87,6 @@
     display: block;
     padding: 8px;
     font-size: 25px;
-    font-weight: bold;
     color: rgb(70, 74, 105);
 }
 
@@ -137,5 +137,34 @@
         color: #990000;
     }
 
+
+}
+
+@media (max-width: 1050px) {
+
+    .new-note__title {
+        font-size: 25px
+    }
+
+    .new-note__textarea,
+    .new-note__input {
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 920px) {
+    .new-note {
+        width: 50%;
+        left: 25%;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .new-note {
+        width: 70%;
+        left: 15%;
+    }
 
 }
