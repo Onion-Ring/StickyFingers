@@ -7,6 +7,30 @@
     text-align: center;
 }
 
+.new-note-section__close-button {
+    text-align: right;
+    position: absolute;
+    top: 0;
+    color: rgb(70, 74, 105);
+    position: absolute;
+    right: 15px;
+}
+
+.new-note-section__close-button:hover,
+.open-button:hover {
+    transform: scale(1.2);
+}
+
+.new-note-section__close-button,
+.open-button {
+    border: none;
+    padding: 4px;
+    background: transparent;
+    font-size: 20px;
+
+    border-radius: 3px;
+}
+
 .new-note-section__title {
     color: rgb(70, 74, 105);
 }
@@ -28,21 +52,6 @@
     animation: resize-btn 0.9s infinite alternate; 
 }
 
-.new-note-section__close-button,
- .open-button {   
-    border: none;
-    padding: 4px;
-    background: transparent;
-    font-size: 20px;
-    
-    border-radius: 3px;
-}
-
-.new-note-section__close-button:hover,
-.open-button:hover {    
-    transform: scale(1.2);    
-}
-
 .new-note-section__close-open-tab {
     background-color: rgb(255, 255, 255);
     border-radius: 10px;    
@@ -58,14 +67,7 @@
     margin-top: 3px;    
 }
 
-.new-note-section__close-button{
-    text-align: right;
-    position: absolute;
-    top: 0;
-    color: rgb(70, 74, 105);
-    position: absolute;
-    right: 15px;
-}
+
 
 @keyframes resize-btn {
 

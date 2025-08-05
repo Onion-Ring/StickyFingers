@@ -6,14 +6,7 @@
     width: 70%;
     margin: auto;
     height: 200px;
-    position: relative;    
-}
-
-li {
-    display: inline-block;
-    list-style-type: none;
-    padding: 4px;
-    margin: auto;
+    position: relative;
 }
 
 p {
@@ -22,17 +15,9 @@ p {
     font-weight: 560;
 }
 
-img {
-    width: 40px;
-}
-
-img:hover{
-    transform: scale(1.2);    
-}
-
 .author-info__social-section,
 .author-info__tech-section {
-    position: absolute;    
+    position: absolute;
     padding: 5px;
 }
 
@@ -52,20 +37,36 @@ img:hover{
     margin-top: 5px;
 }
 
+li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 4px;
+    margin: auto;
+}
+
+img {
+    width: 40px;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+
 @media (max-width: 680px) {
 
 
-:host{
-    width: 95%;
-    height: 250px;
-}
+    :host {
+        width: 95%;
+        height: 250px;
+    }
 
-.author-info__social-section,
-.author-info__tech-section{
-    width: 100%;
-    position: static;
-    margin-top: 10px;
-}
+    .author-info__social-section,
+    .author-info__tech-section {
+        width: 100%;
+        position: static;
+        margin-top: 10px;
+    }
 
 
 }
