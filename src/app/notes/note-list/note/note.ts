@@ -11,10 +11,11 @@ import { NoteModel } from '../../note.model';
 export class Note {
   
   note = input.required<NoteModel>();
-  openDeleteModal = output<number>();
+  openDeleteModal = output<NoteModel>();
   
   onDeleteNote() {
-    this.openDeleteModal.emit(this.note().id);
+    window.scrollTo(0,0);
+    this.openDeleteModal.emit(this.note());
   }
 
 }

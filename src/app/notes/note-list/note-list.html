@@ -1,6 +1,17 @@
 @if(delete()){
-    <app-backdrop (click)="onCloseModal()"  ></app-backdrop>
-    <div deleteWindow (close)="onCloseModal()" [noteId]="noteIdToDelete" ></div>
+<app-backdrop (click)="onCloseModal()"></app-backdrop>
+<div app-delete-window message="Are you sure you want to delete '{{noteTitle}}' ? This action can't be undone">
+    <button class="btn-confirmation" (click)="onDeleteNote()">Yes</button>
+    <button class="btn-decline" (click)="onCloseModal()">No</button>
+</div>
+}@else if (clearNotes()) {
+
+<app-backdrop (click)="onCloseModal()"></app-backdrop>
+<div app-delete-window message="Are you sure you want to clear the notes list? This action can't be undone">
+    <button class="btn-confirmation" (click)="onDeleteNotes()">Yes</button>
+    <button class="btn-decline" (click)="onCloseModal()">No</button>
+</div>
+
 }
 
 <section class="note-list-section">
@@ -23,6 +34,13 @@
         <input class="note-list-section__title-filter__input" name="titleFilter" id="titleFilter" type="text"
             [(ngModel)]="title" placeholder="Filter by title" />
     </div>
+
+    @if(notes().length > 0){
+        <button class="note-list-section__clear-notes" (click)="onClearNotes()">
+            Delete all notes
+        </button>
+    }
+        
 
     <div class="note-list-section__notes">
         @for (noteItem of notes(); track noteItem.id) {

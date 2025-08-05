@@ -39,6 +39,11 @@ export class NotesService {
     localStorage.setItem("notes", JSON.stringify(this.notes()));
   }
 
+  clearNotes():void{
+    this.notes.set([]);
+    localStorage.setItem("notes", JSON.stringify([]));
+  }
+
   // Depending on the signals updated, the list will be filtered
   // by one or two criterias
   filterNotes(title: string, priority: string): NoteModel[] {

@@ -32,19 +32,27 @@ export class NewNoteModal {
     } else {
 
       this.checkOptionalFields();
+      this.formatFields();
 
       this.notesService.addNote(this.note());
 
       // After adding the note we need to ensure both form and note object are reset      
       this.note.set({ title: "", id: 0, description: "", priority: "High", category: "" });
       this.form().nativeElement.reset();
-
     }
 
   }
 
-  // In case one of these fields were not selected, a default value is applied
-  private checkOptionalFields() {
+  /* Applied lowercase to title, category and description
+   in order to transform them later using pipes*/
+  private formatFields():void {
+    this.note().title = this.note().title.toLowerCase();
+    this.note().category = this.note().category.toLowerCase();
+    this.note().description = this.note().description.toLowerCase();    
+  }
+
+  // In case one of these fields were not set, a default value is applied
+  private checkOptionalFields():void {
 
     if (!this.note().description) {
       this.note().description = this.note().title;
@@ -54,7 +62,7 @@ export class NewNoteModal {
       this.note().category = "other";
     }
 
-    if(!this.note().priority){
+    if (!this.note().priority) {
       this.note().priority = 'High';
     }
 

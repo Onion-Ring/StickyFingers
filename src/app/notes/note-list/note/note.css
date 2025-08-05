@@ -1,11 +1,16 @@
 .note {
     width: 25%;
-    padding: 12px;
-    margin: 12px;
     background-color: rgb(90, 89, 78);
-    display: inline-block;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 12px;
+    flex-direction: column;
+    margin: 12px;
     border-radius: 5px;
     position: relative;
+    min-height: 200px;
 }
 
 /* Priority, delete note button, category and note title 
@@ -33,9 +38,6 @@ are elements that need to be positioned*/
 .high {
     color: #ff6666;
     animation: change-color 1.3s infinite alternate;
-    animation-delay: 0s;
-    animation-fill-mode: both;
-    animation-play-state: running;
 }
 
 .low {
@@ -53,7 +55,6 @@ are elements that need to be positioned*/
     font-size: 20px;
     z-index: 5;
     color: rgb(145, 145, 136);
-    ;
     right: 8px;
     top: -4px;
     border-radius: 3px;
@@ -74,18 +75,24 @@ are elements that need to be positioned*/
     border-top-right-radius: 5px;
     left: 0;
     text-align: center;
+    text-transform: capitalize;
     width: 100%;
     background-color: #2c2c2c;
 }
 
 .note__description {
+    margin-top: 40px;
     padding: 14px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     color: white;
     text-align: left;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
+.note__description::first-letter {
+    text-transform: uppercase;
+}
 
 .note__category {
     bottom: 0;
