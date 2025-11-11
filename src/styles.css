@@ -13,6 +13,22 @@ button {
     cursor: pointer;
 }
 
+button:hover {
+    animation: resize-btn 0.9s infinite alternate;
+}
+
+@keyframes resize-btn {
+
+    from {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1.55);
+    }
+
+}
+
 @font-face {
     font-family: 'poppins';
     src: url('./fonts/poppins.ttf') format('truetype');

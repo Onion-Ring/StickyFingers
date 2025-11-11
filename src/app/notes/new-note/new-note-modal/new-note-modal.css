@@ -1,14 +1,13 @@
 .new-note {
     z-index: 15;
     position: fixed;
-    width: 35%;
-    left: 32.5%;
+    width: 50%;
+    left: 25%;
     top: 200px;
     border-radius: 10px;
-    background-color: #ffffff9a;
+    background: rgba(219, 218, 202, 0.5);
     text-align: center;
-    margin: auto;
-    border: 2px solid rgb(70, 74, 105);
+    margin: auto;    
 }
 
 .new-note__close-button {
@@ -68,7 +67,7 @@
     border: 1.2px solid rgb(70, 74, 105);
     border-radius: 3px;
     width: 70%;
-    font-size: 20px;
+    font-size: 18px;
     background-color: transparent;
     margin-top: 10px;
     margin-bottom: 10px;
